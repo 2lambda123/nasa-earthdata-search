@@ -77,7 +77,6 @@ const collectionsResultsReducer = (state = initialState, action = {}) => {
 
       return {
         ...state,
-        timerStart: null,
         loadTime: Date.now() - timerStart
       }
     }

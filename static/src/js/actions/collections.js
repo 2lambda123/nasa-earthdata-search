@@ -20,6 +20,7 @@ import {
   UPDATE_GRANULE_FILTERS
 } from '../constants/actionTypes'
 
+import { metricsFinishedCollectionsRendering } from '../middleware/metrics/actions'
 import { getFocusedCollectionId } from '../selectors/focusedCollection'
 import { getEarthdataEnvironment } from '../selectors/earthdataEnvironment'
 import { pruneFilters } from '../util/pruneFilters'
@@ -209,6 +210,12 @@ export const getCollections = () => (dispatch, getState) => {
       }))
 
       dispatch(updateFacets(payload))
+
+      const { searchResults } = getState()
+
+      dispatch(metricsFinishedCollectionsRendering({
+        duration: Date.now() - searchResults.collections.timerStart
+      }))
     })
     .catch((error) => {
       if (isCancel(error)) return

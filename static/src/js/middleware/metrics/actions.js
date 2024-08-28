@@ -2,6 +2,7 @@ import {
   METRICS_BROWSE_GRANULE_IMAGE,
   METRICS_CLICK,
   METRICS_DATA_ACCESS,
+  METRICS_FINISHED_COLLECTIONS_RENDERING,
   METRICS_GRANULE_FILTER,
   METRICS_MAP,
   METRICS_RELATED_COLLECTION,
@@ -58,6 +59,11 @@ export const metricsSpatialSelection = (payload) => ({
 
 export const metricsTiming = (payload) => ({
   type: METRICS_TIMING,
+  payload
+})
+
+export const metricsFinishedCollectionsRendering = (payload) => ({
+  type: METRICS_FINISHED_COLLECTIONS_RENDERING,
   payload
 })
 

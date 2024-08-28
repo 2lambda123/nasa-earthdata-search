@@ -58,15 +58,14 @@ describe('FINISHED_COLLECTIONS_TIMER', () => {
       type: FINISHED_COLLECTIONS_TIMER
     }
 
-    // Set current time to 10, and future time to 15
-    // Load time will equal 5
+    // Set start time to 10, current time to 15 and expect a difference of 5
     jest.spyOn(Date, 'now').mockImplementation(() => 15)
 
     const start = 10
 
     const expectedState = {
       ...initialState,
-      timerStart: null,
+      timerStart: start,
       loadTime: 5
     }
 
