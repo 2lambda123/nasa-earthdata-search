@@ -211,7 +211,7 @@
     "serverless": "^3.37.0",
     "serverless-esbuild": "^1.52.1",
     "serverless-finch": "^4.0.4",
-    "serverless-offline": "^12.0.4",
+    "serverless-offline": "^14.3.4",
     "serverless-plugin-ifelse": "git+https://git@github.com/macrouch/serverless-plugin-ifelse.git",
     "serverless-plugin-log-subscription": "^2.1.5",
     "serverless-plugin-split-stacks": "^1.12.0",
