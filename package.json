@@ -132,7 +132,7 @@
     "crypto-browserify": "^3.12.0",
     "css-loader": "^6.7.1",
     "dropzone": "^5.9.3",
-    "esbuild": "^0.20.2",
+    "esbuild": "^0.25.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.28.1",
